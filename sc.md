@@ -1,5 +1,25 @@
-# practical 1
+# Soft Computing — Practicals
+
+---
+
+## Table of Contents
+
+1. [Practical 1](#practical-1) — Linear neural network, Binary & Bipolar sigmoidal
+2. [Practical 2](#practical-2) — McCulloch-Pitts: AND/NOT, XOR
+3. [Practical 3](#practical-3) — Hebb's rule, Delta rule
+4. [Practical 4](#practical-4) — Back Propagation Algorithm
+5. [Practical 5](#practical-5) — Hopfield Network, Radial Basis Function
+6. [Practical 6](#practical-6) — Kohonen Self-Organizing Map
+7. [Practical 7](#practical-7) — Linear separation (Perceptron)
+8. [Practical 8](#practical-8) — Membership & Identity operators
+9. [Practical 9](#practical-9) — Fuzzy logic: ratios, Tipping problem
+
+---
+
+# Practical 1
+
 ## Design a simple linear neural network model
+
 ```python
 x1 = float(input("X1: "))
 x2 = float(input("X2: "))
@@ -12,7 +32,7 @@ print("Net Input =", yin)
 yout = 1 if yin > 0 else 0
 print("Output =", yout)
 ```
-##  Neural net using both binary and bipolar sigmoidal function
+## Neural net using both binary and bipolar sigmoidal function
 
 ```python
 import numpy as np
@@ -33,9 +53,12 @@ print("Bipolar Output =", round(bip_out, 4))
 
 ```
 
-# practical 2
+---
 
-##  Generate AND/NOT function using McCulloch Pitts neural net
+# Practical 2
+
+## Generate AND/NOT function using McCulloch Pitts neural net
+
 ```python
 def neuron(inputs, weights, th):
     return 1 if sum(i*w for i, w in zip(inputs, weights)) >= th else 0
@@ -50,7 +73,7 @@ print("AND:", AND(0,0), AND(0,1), AND(1,0), AND(1,1))
 print("NOT:", NOT(0), NOT(1))
 
 ```
-## Generate XOR function using McCulloch-Pitts neural net.
+## Generate XOR function using McCulloch-Pitts neural net
 ```python
 import numpy as np
 
@@ -78,8 +101,11 @@ print("XOR(1,1) =", xor(1,1))
 
 ```
 
-# practical 3
-## Write a program to implement Hebb’s rule.
+---
+
+# Practical 3
+
+## Write a program to implement Hebb's rule
 
 ```python
 w1 = w2 = b = 0
@@ -105,7 +131,7 @@ print("b  =", b)
 
 ```
 
-## Write a program to implement of Delta rule. 
+## Write a program to implement the Delta rule
 
 ```python
 import numpy as np
@@ -141,8 +167,11 @@ print("b  =", round(b[0], 2))
 
 ```
 
-# practical 4
-## Write a program for Back Propagation Algorithm.
+---
+
+# Practical 4
+
+## Write a program for Back Propagation Algorithm
 
 ```python
 import numpy as np
@@ -190,8 +219,11 @@ for x in X:
 
 ```
 
-# practical 5
-## Write a program for Hopfield Network.
+---
+
+# Practical 5
+
+## Write a program for Hopfield Network
 
 ```python
 import numpy as np
@@ -232,7 +264,7 @@ print("Output:", pred)
 
 ```
 
-## Write a program for Radial Basis function.
+## Write a program for Radial Basis function
 
 ```python
 import numpy as np
@@ -303,9 +335,11 @@ plt.show()
 
 ```
 
-# practical 6
+---
 
-## Kohonen Self organizing map.
+# Practical 6
+
+## Kohonen Self-Organizing Map
 
 ```python
 import numpy as np
@@ -347,7 +381,10 @@ plt.show()
 
 ```
 
-# practical 7
+---
+
+# Practical 7
+
 ## Write a program for Linear separation
 
 ```python
@@ -391,9 +428,12 @@ print("Weights:", w, "Bias:", b)
 plot_data(X, y, np.insert(w, 0, b))
 
 ```
-# practical 8
 
-## Membership and Identity Operators | in, not in
+---
+
+# Practical 8
+
+## Membership and Identity Operators — `in`, `not in`
 
 ```python
 a, b = 10, 20
@@ -405,7 +445,7 @@ print("b not in list" if b not in lst else "b in list")
 a = 2
 print("a in list" if a in lst else "a not in list")
 ```
-## Membership and Identity Operators is, is not
+## Membership and Identity Operators — `is`, `is not`
 
 ```python
 a = [1, 2, 3]
@@ -434,7 +474,7 @@ print("WRatio:", fuzz.WRatio(s1, s2))
 
 ```
 
-## Solve Tipping problem using fuzzy logic. 
+## Solve Tipping problem using fuzzy logic 
 
 ```python
 import numpy as np
